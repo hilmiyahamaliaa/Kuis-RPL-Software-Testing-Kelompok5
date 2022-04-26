@@ -23,7 +23,7 @@ open class Student {
     var tanggallahir : String = ""
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
-   fun Tanggal() {
+   fun tanggal() {
        val format = DateTimeFormatter.ofPattern("dd MMMM, yyyy", Locale.getDefault())
         val date = LocalDate.parse(tanggallahir, format)
    }
@@ -32,7 +32,7 @@ open class Student {
     var nohp : String = ""
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
-    *  Contoh : {"ayah" : "majdi", "Ibu" : "Stephani"}
+    *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
     var ortu : String = ""
     constructor(ID: Int, name: String, tanggallahir: String, nohp: String, ortu : String) {
@@ -45,9 +45,12 @@ open class Student {
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
-    * contoh : ['Bersepeda', 'Bernyanyi', 'Makan', 'Ke indomaret']
+    * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
-//    val hobi : listof("Bersepeda","Bernyanyi","Makan","Plastik","turu")
+    fun hobi(args: Array<String>): List<String> {
+        var hobi = array.toList()
+    }
+    
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -77,6 +80,8 @@ class siswa : Student {
 
 fun main()
 {
-    val student1 = siswa(1,"Annisa","24 Juni 2001", "0821","Majdi")
+    val student1 = siswa()
+    student1.tanggal()
     student1.student()
+    student1.hobi()
 }
