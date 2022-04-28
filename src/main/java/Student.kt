@@ -30,6 +30,8 @@ open class Student {
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
     var nohp : String = ""
+    
+    
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
@@ -48,7 +50,7 @@ open class Student {
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
     fun hobi(args: Array<String>): List<String> {
-        var hobi = array.toList()
+        var hobi = arrayOf("Membaca Buku", "Memasak", "Berbelanja", "Menyanyi")
     }
     
 
@@ -59,6 +61,9 @@ open class Student {
     * Tanggal Lahir : 10 Agustus 2019.
     * NIM nya menjadi : 5JT10082019
     * */
+    fun nim(ID: Int, name: String, tanggalLahir: String): String{
+        var nim : String = ""
+    }
 
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
@@ -84,4 +89,5 @@ fun main()
     student1.tanggal()
     student1.student()
     student1.hobi()
+    student1.nim()
 }
